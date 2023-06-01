@@ -14,7 +14,7 @@ class SourceController extends Controller {
 
     expires.setDate(expires.getDate() + 1); // 过期时间设置为 7 天后
 
-    ctx.cookies.set('myCookie', 'HelloWorld', { domain: 'i.nianxiaonian.com', path: '/', expires });
+    ctx.cookies.set('myCookie', 'HelloWorld', { domain: 'i.nianxiaonian.com', path: '/', expires, httpOnly: false });
     ctx.body = 'Cookie set successfully.';
   }
 }
